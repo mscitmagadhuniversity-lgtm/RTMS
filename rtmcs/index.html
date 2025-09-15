@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>RTMCS-2025 | National Conference - Magadh University</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
   <!-- Colors: Magadh University -->
   <style>
     :root{
@@ -48,14 +51,23 @@
     .brand { display:flex; align-items:center;  }
     
     .brand img {
+        height: 150px;         /* fixed height */
+        width: 150px;          /* fixed width */
+        object-fit: contain;  /* keeps proportions inside the box */
+        margin-left:  70px;
+      }
+
+    .brand1 { display:flex; align-items:center;  }
+    
+    .brand1 img {
         height: 130px;         /* fixed height */
         width: 150px;          /* fixed width */
         object-fit: contain;  /* keeps proportions inside the box */
-        /*margin-right: 1px; */
+        
       }
 
-    .brand h4{ margin: -40px;; color:var(--mu-blue); font-size:18px; /*letter-spacing:2px; */ }
-    .menu { display:flex; gap:16px; align-items:center; }
+    .brand h4{ margin: 0px; color:var(--mu-blue); font-size:28px; /*letter-spacing:2px; */ }
+    .menu { display:inline-flex; gap:16px; align-items:center; }
     .menu a{
       color:var(--mu-blue); text-decoration:none; font-weight:600; font-size:18px;
       padding:8px 10px; border-radius:8px;
@@ -63,12 +75,6 @@
     .menu a:hover{ background:rgba(0,0,0,0.04); }
 
 
-   /* .left-logos img {
-      height: 110px;   
-      width: 150px;    
-      object-fit: contain;
-      margin-right: 10px; 
-      vertical-align: middle; */
     }
     /* HERO */
     .hero{
@@ -96,8 +102,8 @@
       padding:36px;
       color: #fff;
     }
-    .hero-left{ text-align:left; flex:1; z-index:2; }
-    .logo-wrap{ text-align:center; margin-bottom:18px; }
+    .hero-left{ text-align:justify; flex:1; z-index:2; }
+    .logo-wrap{ text-align:justify; margin-bottom:18px; }
     .logo-wrap img{ max-height:150px; }
 
     .title{
@@ -523,88 +529,101 @@
         font-size: 13px;
       }
     }
+
+
+
+
+     .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+   
     /* ...existing code... */
   </style>
 </head>
 <body>
 
   <!-- NAV -->
-  <div class="nav" aria-hidden="false">
-    <div class="nav-inner">
-      <div class="brand ">
-        <!-- <img src="logo2.png" alt="Magadh University Logo"> -->
-        <img src="logo.png" alt="Magadh University Logo">
-        <h4> &nbsp; &nbsp; &nbsp; RTMCS-2025 </h4>
+  <div class="row px-5 " style='height:"90px"; '>
+      <div class="brand col-6  ">
+        
+        <img src="logo.png" alt="rtmcs-2025">
+        <div>RTMCS-2025 </div>
       </div>
 
        <!-- Hamburger (hidden on desktop) -->
-        <button class="hamburger" aria-label="Toggle menu">
+        <!-- <button class="hamburger" aria-label="Toggle menu">
             ☰
-        </button>
-      <div class="menu" id="menu">
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        </button> -->
+      <div class="menu col-6" id="menu">
+                                                        
         <a href="#about">About</a>
         <a href="#topics">Topics</a>
         <a href="#dates">Dates</a>
         <a href="#registration">Registration</a>
         <a href="#contact">Contact</a>
       </div>
-      <div class="brand" style="align-content: normal; ">
-        <a href="https://magadhuniversity.ac.in/"><img src="logo3.jpg" alt="Magadh University Logo"></a>
-      </div>
-    </div>
+    
   </div>
 
   <header class="hero" role="banner">
-    <div class="hero-inner">
+    <div class="hero-inner p-0">
       <div class="hero-left">
-
+          <div class="brand1 d-flex align-items-center justify-content-center px-0" style="align-content: normal; ">
+        <a href="https://magadhuniversity.ac.in/"><img src="logo3.jpg" alt="Magadh University Logo"></a>
+      </div>
         
       
 
-          <div class="title">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; “Welcome To” 
-                  <br>      &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Conference on <br> &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: yellow;"> “Recent Trends in Mathematical and Computational Sciences” </span>
-            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    (RTMCS-2025)
+          <div class="title">    
+            <div>
+                 Welcome To Conference on   
+            </div>                                             
+                                                       
+              <div class="row px-0" >
+              <span class="d-flex align-items-center justify-content-center px-0" style="color: yellow;"> “Recent Trends in Mathematical and Computational Sciences” </span>
+                                        
+                        <div class="d-flex align-items-center justify-content-center px-0 "  > <span>(RTMCS-2025)</span></div>
+              </div>
+                
           </div>
-          <div class="subtitle">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;November 28–29, 2025 
+          <div class="subtitle d-flex align-items-center justify-content-center">                              
+             November 28–29, 2025 
           </div>
-  
-        <div class="hero-meta">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   <div class="pill"> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; 
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; Organized by <br> 
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; P.G. Dept. of Mathematics & Dept. of CS & IT • Magadh University, Bodh Gaya  
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-          &nbsp; &nbsp; 
-          <div class="pill">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-             &nbsp;  Sponsored by <br> &nbsp; &nbsp;   Computing Research Society (SCRS) &nbsp; &nbsp; &nbsp;  </div>
+          <div class=" d-flex align-items-center justify-content-center" > <b>Organized By</b></div>
+        <div class="hero-meta d-flex align-items-center justify-content-center">
+                                              
+          <div class="  d-flex align-items-center justify-content-center">                      
+              <div class="pill  d-flex align-items-center justify-content-center">P.G. Dept. of 
+                Mathematics & Dept. of CS & IT • Magadh University, Bodh Gaya</div>   
+              </div>                              
+          </div>
+              <div class=" d-flex align-items-center justify-content-center">                             
+                 <br><div><b>Sponsored by </b>         </div>
+        </div>
+
+          <div class="hero-meta d-flex align-items-center justify-content-center">                                               
+        <div class="pill d-flex align-items-center justify-content-center">                             
+                           Computing Research Society (SCRS)           </div>
         </div>
   
-      <div class="countdown" aria-hidden="false" id="countdown">
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+      <div class="countdown d-flex align-items-center justify-content-center" aria-hidden="false" id="countdown">
+                                                
+                                                        
+                                           
          <div class="unit"><span class="num" id="cd-days">--</span><span class="lab">Days</span></div>
           <div class="unit"><span class="num" id="cd-hours">--</span><span class="lab">Hours</span></div>
           <div class="unit"><span class="num" id="cd-mins">--</span><span class="lab">Minutes</span></div>
           <div class="unit"><span class="num" id="cd-secs">--</span><span class="lab">Seconds</span></div>
         </div>
   
-        <div class="hero-ctas">
-          &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; 
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; <a class="btn btn-white" href="Brochure_final.pdf" download>Brochure </a>
+        <div class="hero-ctas d-flex align-items-center justify-content-center">
+                                          
+                                                      
+                                                      
+             <a class="btn btn-white" href="Brochure_final.pdf" download>Brochure </a>
           <a class="btn btn-gold" href="https://tinyurl.com/RTMCS-2025" target="_blank" rel="noopener">Register Now</a>
         </div>
       </div>
@@ -769,8 +788,8 @@
             <ul class="committee-list">
               <!-- Speaker 1 -->
                   <div class="speaker-card underline">
-                    <img src="pic/Prof_s_p_sahi.jpg" alt="Prof. S. P. Shahi<br> Hon’ble Vice-Chancellor">
-                    <h3>Prof. S. P. Shahi<br> Hon’ble Vice-Chancellor</h3>
+                    <a href="https://en.wikipedia.org/wiki/Shashi_Pratap_Shahi"><img src="pic/Prof_s_p_sahi.jpg" alt="Prof. S. P. Shahi<br> Hon’ble Vice-Chancellor"></a>
+                    <a href="https://en.wikipedia.org/wiki/Shashi_Pratap_Shahi"><h3>Prof. S. P. Shahi<br> Hon’ble Vice-Chancellor</h3></a>
                     <p> M.U., Bodh Gaya </p>
                   </div> 
           </div>
@@ -784,8 +803,8 @@
             <ul class="committee-list">
               <!-- Speaker 1 -->
                   <div class="speaker-card underline">
-                    <img src="pic/Prof_b_r_k_Singh.jpg" alt="xyz">
-                    <h3>Prof. B. R. K. Sinha <br>Pro Vice-Chancellor</h3>
+                   <a href="https://www.magadhuniversity.ac.in/pro-vice-chancellor">  <img src="pic/Prof_b_r_k_Singh.jpg" alt="Prof. B. R. K. Sinha"></a>
+                    <a href="https://www.magadhuniversity.ac.in/pro-vice-chancellor"><h3>Prof. B. R. K. Sinha <br>Pro Vice-Chancellor</h3></a>
                     <p> M.U., Bodh Gaya </p>
                   </div> 
              
@@ -793,7 +812,7 @@
             <ul class="committee-list">
                 <!-- Speaker 1 -->
                   <div class="speaker-card underline">
-                    <img src="pic/Dr_Binod_kumar_mangalam.jpg" alt="xyz">
+                    <img src="pic/Dr_Binod_kumar_mangalam.jpg" alt="Dr. Binod Kumar Manglam">
                     <h3>Dr. Binod Kumar Manglam <br> Registrar</h3>
                     <p> M.U., Bodh Gaya </p>
                   </div>
@@ -809,9 +828,9 @@
             <ul class="committee-list">
               <!-- Speaker 1 -->
                   <div class="speaker-card underline" style="height: 350px;">
-                    <img src="pic/hod2.jpg" alt="xyz">
-                    <h3 class="underline">Dr. Sunil Suman, Head/Incharge,
-                       Department of Mathematics</h3>
+                    <a href="https://mathematics.magadhuniversity.ac.in/professorDetails/66"><img src="pic/hod2.jpg" alt="Dr. Sunil Suman"></a>
+                    <a href="https://mathematics.magadhuniversity.ac.in/professorDetails/66"><h3 class="underline">Dr. Sunil Suman, Head/Incharge,
+                       Department of Mathematics</h3></a>
                     <p> M.U., Bodh Gaya </p>
                   </div> 
           
@@ -825,8 +844,8 @@
             <ul class="committee-list">
               <!-- Speaker 1 -->
                   <div class="speaker-card underline" style="height: 300px;">
-                    <img src="pic/Sanjay_Tiwari_Sirg.jpeg" alt="xyz">
-                    <h3>Dr. S. K. Tiwari, Associate Professor, Dept of Mathematics</h3>
+                    <a href="https://mathematics.magadhuniversity.ac.in/professorDetails/92"> <img src="pic/Sanjay_Tiwari_Sirg.jpeg" alt="Dr. S. K. Tiwari"></a>
+                    <a href="https://mathematics.magadhuniversity.ac.in/professorDetails/92"> <h3>Dr. S. K. Tiwari, Associate Professor, Dept of Mathematics</h3></a>
                     <p> M.U., Bodh Gaya </p>
                   </div> 
           
@@ -839,8 +858,8 @@
             <ul class="committee-list">
               <!-- Speaker 1 -->
                   <div class="speaker-card underline">
-                    <img src="pic/Amar_Sirg.gif" alt="xyz">
-                    <h3>Dr. Amar Kishor, Department of <br> Mathematics</h3>
+                    <a href="https://scholar.google.nl/citations?user=rvSTl4QAAAAJ&hl=id"><img src="pic/Amar_Sirg.gif" alt="Dr. Amar Kishor"></a>
+                    <a href="https://scholar.google.nl/citations?user=rvSTl4QAAAAJ&hl=id"><h3>Dr. Amar Kishor, Department of <br> Mathematics</h3></a>
                     <p> M.U., Bodh Gaya </p>
                   </div> 
              
@@ -864,8 +883,8 @@
             <ul class="committee-list">
               <!-- Speaker 1 -->
                   <div class="speaker-card underline" >
-                    <img src="pic/pintu_Sirg.jpg" alt="xyz">
-                    <h3>Dr. Pintu Samanta, Department of Mathematics</h3>
+                    <a href="https://mathematics.magadhuniversity.ac.in/professorDetails/47"><img src="pic/pintu_Sirg.jpg" alt="xyz"> </a>
+                    <a href="https://mathematics.magadhuniversity.ac.in/professorDetails/47"><h3>Dr. Pintu Samanta, Department of Mathematics</h3></a>
                     <p> M.U., Bodh Gaya </p>
                   </div> 
           
